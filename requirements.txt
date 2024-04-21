@@ -1,0 +1,12 @@
+# Super specific requeriments for everything to work.
+python=3.5
+
+tensorflow==1.0
+gensim==1.0.1
+matplotlib==2.0.0
+scikit-learn==0.18.1
+numpy==1.12.0
+scipy==1.0
+
+h5py==2.7.0
+pandas==0.20.3

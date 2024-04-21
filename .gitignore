@@ -1,0 +1,10 @@
+# files from the paper, both data and Notebooks
+GCN_Cancer_Paper/
+
+# Python caches
+__pycache__/
+
+# automatic summaries and checkpoints
+checkpoints/
+summaries/
+
