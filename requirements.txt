@@ -1,6 +1,6 @@
 # Super specific requeriments for everything to work.
-python=3.5
-
+python==3.5.5
+protobuf==3.19.6
 tensorflow==1.0
 gensim==1.0.1
 matplotlib==2.0.0
