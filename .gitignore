@@ -7,4 +7,5 @@ __pycache__/
 # automatic summaries and checkpoints
 checkpoints/
 summaries/
+results/
 

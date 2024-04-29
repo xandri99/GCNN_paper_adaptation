@@ -305,19 +305,24 @@ class model_perf(object):
         ### starting the dropout code 
         Knockdown = []
         Knockup = []
-        for i in range(7100):
+        for i in range(test_data.shape[1]):
             if i % 50 == 0:
                 print(' On gene number')
                 print(i)
-            Datadown = test_data
+            # Knock Down
+            Datadown = test_data.copy()
             Datadown[:,i]=0
             Knockdown.append(model.evaluate(Datadown, test_labels, pre = True))
-            Dataup = test_data
+            # Knock Up
+            Dataup = test_data.copy()
             Dataup[:,i]=0
             Knockup.append(model.evaluate(Dataup, test_labels, pre = True))
+
         sio.savemat('Knockdown.mat', {'Knockdown':Knockdown})
         sio.savemat('Knockup.mat', {'Knockup':Knockup})
-        ##
+        
+
+        
     def show(s, fontsize=None):
         if fontsize:
             plt.rc('pdf', fonttype=42)
